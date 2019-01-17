@@ -1,4 +1,4 @@
-module.exports = {
+ {
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -15,10 +15,6 @@ module.exports = {
     "rules": {
         "no-console": 1,
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        // "import/no-unresolved": [
-        //     2, 
-        //     { caseSensitive: false }
-        //  ]
-        "import/no-unresolved": [0],
+        "import/no-unresolved": [0]
     }
-  };
+  }
