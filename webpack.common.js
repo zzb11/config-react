@@ -2,12 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const config = {
   entry: ['babel-polyfill', './src/main.js'],
   output: {
     filename: '[name].bundle-[hash].js',
     path: path.join(__dirname, 'dist'),
+    publicPath:'./dist'
   },
   // module: {
   //   rules: [
@@ -46,6 +47,13 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new webpack.DllReferencePlugin({
+      // 描述 polyfill 动态链接库的文件内容
+      manifest: require('./dist/vendor.manifest.json'),
+    }),
+    // new AddAssetHtmlPlugin({
+    //   filepath: path.resolve(__dirname, './dist/vendor.dll.js'),
+    // }),
     // new CleanWebpackPlugin(['dist']),
     // new webpack.HotModuleReplacementPlugin(),
   ],

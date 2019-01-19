@@ -31,7 +31,7 @@ const config = merge(common, {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['./dist']),
+    // new CleanWebpackPlugin(['./dist']),
     new UglifyJSPlugin(),
   ],
 });
