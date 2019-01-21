@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --colors --progress --inline --config webpack.dev.js",
+    "start": "webpack-dev-server --open --colors --progress --config webpack.dev.js",
     "build": "webpack --colors --progress --config webpack.prod.js",
     "dll": "webpack --config webpack_dll.config.js"
   },
@@ -47,7 +47,8 @@
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",

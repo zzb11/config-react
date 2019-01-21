@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img from './img/1.png';
+// import img from './img/1.png';
 
 export default function () {
   console.log(2);
@@ -9,9 +9,9 @@ export default function () {
   });
   return (
     <div className="header">
-      <img src={img} alt="" srcSet="" />
+      {/* <img src={img} alt="" srcSet="" /> */}
       111
-      React
+      {/* React */}
     </div>
   );
 }
